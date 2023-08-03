@@ -1,4 +1,4 @@
-package io.kontak.apps.temperature.generator;
+package io.kontak.apps.temperature.generator.generator;
 
 import io.kontak.apps.event.TemperatureReading;
 

@@ -1,4 +1,4 @@
-package io.kontak.apps.temperature.generator;
+package io.kontak.apps.temperature.generator.generator;
 
 import io.kontak.apps.event.TemperatureReading;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 import java.time.Instant;
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 
 @Component
 public class SimpleTemperatureGenerator implements TemperatureGenerator {
@@ -19,11 +18,10 @@ public class SimpleTemperatureGenerator implements TemperatureGenerator {
     }
 
     private TemperatureReading generateSingleReading() {
-        //TODO basic implementation, should be changed to the one that will allow to test and demo solution on realistic data
         return new TemperatureReading(
-                random.nextDouble(10d, 30d),
-                UUID.randomUUID().toString(),
-                UUID.randomUUID().toString(),
+                random.nextDouble(15d, 25d),
+                "1",
+                "1",
                 Instant.now()
         );
     }

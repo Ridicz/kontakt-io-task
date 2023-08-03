@@ -8,9 +8,9 @@ import org.testcontainers.containers.KafkaContainer;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
-@SpringBootTest(classes = AnomalyDetectorApplication.class)
 @Testcontainers
-public class AbstractIntegrationTest {
+@SpringBootTest(classes = AnomalyDetectorApplication.class)
+public abstract class AbstractIntegrationTest {
 
     public final static KafkaContainer kafkaContainer;
 
@@ -23,5 +23,4 @@ public class AbstractIntegrationTest {
     static void datasourceConfig(DynamicPropertyRegistry registry) {
         registry.add("spring.cloud.stream.binders.kafka.environment.spring.cloud.stream.kafka.streams.binder.brokers", kafkaContainer::getBootstrapServers);
     }
-
 }

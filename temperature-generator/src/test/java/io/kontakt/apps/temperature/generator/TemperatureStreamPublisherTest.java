@@ -29,7 +29,7 @@ public class TemperatureStreamPublisherTest extends AbstractIntegrationTest {
             publisher.publish(temperatureReading);
             consumer.drain(
                     consumerRecords -> consumerRecords.stream().anyMatch(r -> r.value().thermometerId().equals(temperatureReading.thermometerId())),
-                    Duration.ofSeconds(5)
+                    Duration.ofSeconds(5L)
             );
         }
     }

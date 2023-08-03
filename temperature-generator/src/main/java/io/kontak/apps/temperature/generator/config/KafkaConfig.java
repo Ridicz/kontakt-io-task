@@ -38,6 +38,4 @@ public class KafkaConfig {
                 .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
                 .build();
     }
-
-
 }

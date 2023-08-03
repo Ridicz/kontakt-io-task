@@ -20,6 +20,7 @@ public class TemperatureStreamPublisher {
     public void publish(TemperatureReading temperatureReading) {
         messageProducer.tryEmitNext(
                 MessageBuilder.withPayload(temperatureReading)
+                        .setHeader(KafkaHeaders.MESSAGE_KEY, "TEMPERATURE_READING")
                         .setHeader("identifier", temperatureReading.thermometerId())
                         .build()
         );

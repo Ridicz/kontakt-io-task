@@ -1,0 +1,20 @@
+generator:
+  config:
+    first:
+      baseTemp: 20.5
+      anomalyFreq: 8
+      perGeneration: 15
+      anomalyDeviation: 10.0
+      standardDeviation: 1.5
+    second:
+      baseTemp: 21.0
+      anomalyFreq: 8.0
+      perGeneration: 40
+      anomalyDeviation: 8
+      standardDeviation: 2.5
+    third:
+      baseTemp: 20.0
+      anomalyFreq: 8
+      perGeneration: 60
+      anomalyDeviation: 9.0
+      standardDeviation: 2.0

@@ -1,5 +1,6 @@
 package io.kontak.apps.temperature.generator;
 
+import io.kontak.apps.temperature.generator.generator.TemperatureGenerator;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 

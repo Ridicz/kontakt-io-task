@@ -8,8 +8,8 @@ import org.testcontainers.containers.KafkaContainer;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
-@SpringBootTest(classes = TemperatureGeneratorApplication.class)
 @Testcontainers
+@SpringBootTest(classes = TemperatureGeneratorApplication.class)
 public class AbstractIntegrationTest {
 
     public final static KafkaContainer kafkaContainer;
@@ -23,5 +23,4 @@ public class AbstractIntegrationTest {
     static void datasourceConfig(DynamicPropertyRegistry registry) {
         registry.add("spring.cloud.stream.kafka.binder.brokers", kafkaContainer::getBootstrapServers);
     }
-
 }
